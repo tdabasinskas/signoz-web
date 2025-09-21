@@ -5,7 +5,7 @@ title: Migrate Dashboard from Honeycomb to SigNoz
 description: Learn how to migrate Honeycomb dashboards and queries to SigNoz with comprehensive query translation patterns.
 ---
 
-Since both platforms are now OpenTelemetry-native, the migration primarily focuses on translating Honeycomb's 
+Since both platforms are now OpenTelemetry-native, the migration primarily focuses on translating Honeycomb's
 proprietary query syntax to PromQL and ClickHouse SQL, while leveraging SigNoz's enhanced visualization and querying capabilities.
 
 ## SigNoz Dashboard Templates
@@ -57,14 +57,13 @@ Please refer to the [Panel Types](https://signoz.io/docs/dashboards/panel-types/
 
 SigNoz supports essential dashboard features including:
 
-**Variables**: Create template variables for dynamic dashboards  
-**Query Builder**: [The Query Builder](https://signoz.io/docs/userguide/query-builder-v5/) is SigNoz's structured query interface that combines the power of expression-based querying with intelligent auto-completion  
-**Filters**: Apply filters across panels and data sources  
-**Sharing**: Share dashboards with team members and external users  
-**Time Controls**: Flexible time range selection and auto-refresh  
+**Variables**: Create template variables for dynamic dashboards
+**Query Builder**: [The Query Builder](https://signoz.io/docs/userguide/query-builder-v5/) is SigNoz's structured query interface that combines the power of expression-based querying with intelligent auto-completion
+**Filters**: Apply filters across panels and data sources
+**Sharing**: Share dashboards with team members and external users
+**Time Controls**: Flexible time range selection and auto-refresh
 
 For detailed dashboard management, refer to the [Manage Dashboards](https://signoz.io/docs/userguide/manage-dashboards/) documentation.
-
 
 ## Honeycomb to SigNoz Functionality Mapping
 
@@ -83,9 +82,7 @@ Honeycomb uses proprietary query syntax while SigNoz uses standard PromQL for me
 
 Each Honeycomb query needs to be rewritten for SigNoz using PromQL or ClickHouse SQL syntax, with appropriate field names and aggregation functions.
 
-
 Migrating dashboards from Honeycomb to SigNoz involves translating proprietary query syntax to standard PromQL and ClickHouse SQL. SigNoz's extensive template library, enhanced panel types, and unified observability approach provide significant advantages over Honeycomb's board-based system, enabling better visualization and correlation across metrics, logs, and traces.
-
 
 ## Next Steps
 

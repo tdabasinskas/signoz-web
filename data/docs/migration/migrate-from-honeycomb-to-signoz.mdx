@@ -37,23 +37,10 @@ If you're still using Honeycomb's legacy SDKs, follow this approach:
 
 2. **Then**: Follow the OpenTelemetry endpoint configuration steps in this guide
 
-## Honeycomb vs SigNoz Feature Mapping
-
-| Honeycomb Feature | SigNoz Equivalent | Migration Notes |
-|------------------|-------------------|-----------------|
-| Derived Columns | PromQL Queries | Convert aggregations to PromQL expressions |
-| Custom Metrics | OTLP Metrics + Prometheus | Use OpenTelemetry SDKs or Prometheus format |
-| SLOs | Alert Rules | Convert to PromQL-based alert conditions |
-| Triggers | Alert Manager | Configure notification channels and rules |
-| Heatmaps | Histogram Metrics | Use histogram_quantile() functions |
-| Rate Calculations | rate() function | Built-in PromQL rate calculations |
-
 ## Migration Guides
 
 Please refer to the following guides for step-by-step instructions on migrating each component from Honeycomb to SigNoz:
 
-- [Migrating Data](/docs/migration/migrate-from-honeycomb/data) - Configure traces, logs, metrics flow and data correlation
-- [Migrating Metrics](/docs/migration/migrate-from-honeycomb/metrics) - Transfer custom metrics, derived columns, and SLOs  
-- [Migrating Dashboards](/docs/migration/migrate-from-honeycomb/dashboards) - Recreate boards and queries with enhanced visualizations
-- [Migrating Alerts](/docs/migration/migrate-from-honeycomb/alerts) - Convert triggers to alert rules with notification channels
- 
+- **[Migrating Data](/docs/migration/migrate-from-honeycomb/data)** - Configure traces, logs, and metrics flow with unified data correlation and additional metrics sources
+- **[Migrating Dashboards](/docs/migration/migrate-from-honeycomb/dashboards)** - Recreate boards and queries with enhanced visualizations
+- **[Migrating Alerts](/docs/migration/migrate-from-honeycomb/alerts)** - Convert triggers to alert rules with notification channels

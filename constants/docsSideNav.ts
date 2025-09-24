@@ -1564,6 +1564,11 @@ const docsSideNav = [
         items: [
           {
             type: 'doc',
+            route: '/docs/dashboards/dashboard-templates/anthropic-dashboard',
+            label: 'Anthropic API',
+          },
+          {
+            type: 'doc',
             route: '/docs/dashboards/dashboard-templates/apache-web-server',
             label: 'Apache Web Server',
           },
@@ -1597,13 +1602,18 @@ const docsSideNav = [
           },
           {
             type: 'doc',
-            route: '/docs/dashboards/dashboard-templates/docker-container-metrics',
-            label: 'Docker Container',
+            route: '/docs/dashboards/dashboard-templates/couchdb',
+            label: 'CouchDB',
           },
           {
             type: 'doc',
-            route: '/docs/dashboards/dashboard-templates/couchdb',
-            label: 'CouchDB',
+            route: '/docs/dashboards/dashboard-templates/deepseek-dashboard',
+            label: 'DeepSeek API',
+          },
+          {
+            type: 'doc',
+            route: '/docs/dashboards/dashboard-templates/docker-container-metrics',
+            label: 'Docker Container',
           },
           {
             type: 'doc',
@@ -2059,6 +2069,11 @@ const docsSideNav = [
         type: 'doc',
       },
       {
+        route: '/docs/deepseek-monitoring',
+        label: 'DeepSeek Monitoring',
+        type: 'doc',
+      },
+      {
         route: '/docs/google-gemini-monitoring',
         label: 'Google Gemini Monitoring',
         type: 'doc',
@@ -2200,6 +2215,11 @@ const docsSideNav = [
         route: '/docs/integrations/supabase',
         label: 'Supabase',
       },
+      {
+        type: 'doc',
+        route: '/docs/integrations/nomad',
+        label: 'Nomad'
+      }
     ],
   },
   {

@@ -65,24 +65,25 @@ SigNoz supports essential dashboard features including:
 
 For detailed dashboard management, refer to the [Manage Dashboards](https://signoz.io/docs/userguide/manage-dashboards/) documentation.
 
-## Honeycomb to SigNoz Functionality Mapping
 
-### Basic Query Translation
+## Query Translation from Honeycomb
 
-Honeycomb uses proprietary query syntax while SigNoz uses standard PromQL for metrics and ClickHouse SQL for logs/traces. You can use SigNoz's [Query Builder](https://signoz.io/docs/userguide/query-builder-v5/) for visual query construction or write queries directly. Below are the most common query patterns and their SigNoz equivalents:
+Honeycomb uses proprietary query syntax while SigNoz uses standard PromQL for metrics and ClickHouse SQL for logs/traces. You can use SigNoz's [Query Builder](https://signoz.io/docs/userguide/query-builder-v5/) for visual query construction or write queries directly.
+
+Below are the most common query patterns and their SigNoz equivalents:
 
 | Honeycomb Query | SigNoz Equivalent | Notes |
 |----------------|-------------------|-------|
-| `COUNT` | `sum(rate(metric[5m]))` | PromQL rate function |
-| `COUNT WHERE condition` | `sum(rate(metric{condition}[5m]))` | Label filtering |
-| `AVG(field)` | `avg(metric)` | Direct translation |
-| `P95(field)`, `P99(field)` | `histogram_quantile(0.95, ...)` | Histogram metrics required |
-| `GROUP BY field` | `by (label)` in PromQL | Label-based grouping |
-| `RATE PER SECOND` | `rate(metric[5m])` | Built-in PromQL function |
+| `COUNT` | `count()` | Total occurrences |
+| `COUNT WHERE condition` | `count()` with filters | Use search syntax for conditions |
+| `AVG(field)` | `avg(field)` | Mean values calculation |
+| `P95(field)`, `P99(field)` | `p95(field)`, `p99(field)` | Percentile functions |
+| `GROUP BY field` | Group By: `field` | Use Group By dropdown |
+| `RATE PER SECOND` | `rate()` | Total occurrences per time unit |
 
-Each Honeycomb query needs to be rewritten for SigNoz using PromQL or ClickHouse SQL syntax, with appropriate field names and aggregation functions.
+Each Honeycomb query needs to be rewritten using SigNoz Query Builder functions, with appropriate field names and aggregation functions.
 
-Migrating dashboards from Honeycomb to SigNoz involves translating proprietary query syntax to standard PromQL and ClickHouse SQL. SigNoz's extensive template library, enhanced panel types, and unified observability approach provide significant advantages over Honeycomb's board-based system, enabling better visualization and correlation across metrics, logs, and traces.
+Migrating dashboards from Honeycomb to SigNoz involves translating event-based queries to SigNoz's Query Builder functions. SigNoz's extensive template library, enhanced panel types, and unified observability approach provide significant advantages over Honeycomb's board-based system, enabling better visualization and correlation across metrics, logs, and traces.
 
 ## Next Steps
 
